@@ -51,6 +51,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="PXr-c0-baS" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="14" id="1hv-ML-mqZ"/>
                             <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="Utb-US-ig4" secondAttribute="bottom" constant="20" id="4Hk-3k-EsD"/>

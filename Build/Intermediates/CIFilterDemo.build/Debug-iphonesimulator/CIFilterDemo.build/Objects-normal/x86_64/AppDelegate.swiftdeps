@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C12CIFilterDemo11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "applicationWillEnterForeground"
-- "applicationDidEnterBackground"
-- "applicationWillResignActive"
-- "applicationWillTerminate"
 - "application"
+- "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
 - "applicationDidBecomeActive"
+- "window"
+- "applicationWillTerminate"
+- "applicationWillResignActive"
 depends-top-level:
-- "UIApplicationDelegate"
-- "UIApplication"
-- "UIApplicationLaunchOptionsKey"
-- "UIWindow"
-- "AppDelegate"
-- !private "BooleanLiteralType"
 - "UIResponder"
 - "Bool"
+- !private "BooleanLiteralType"
+- "AppDelegate"
+- "UIApplication"
+- "UIApplicationDelegate"
+- "UIWindow"
+- "UIApplicationLaunchOptionsKey"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

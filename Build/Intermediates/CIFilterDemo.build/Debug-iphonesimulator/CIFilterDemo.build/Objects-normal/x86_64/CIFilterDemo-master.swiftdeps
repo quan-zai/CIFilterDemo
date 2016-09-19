@@ -1,8 +1,9 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
 options: "dce7862a22d95b23b4867d5fb65be651"
-build_time: [527586233, 716222000]
+build_time: [527593540, 197418000]
 inputs:
   "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/ComplexFilterViewController.swift": [527586233, 0]
   "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CIColorInvert.swift": [527568147, 0]
   "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/ViewController.swift": [527495804, 0]
   "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/AppDelegate.swift": [527495564, 0]
+  "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/FaceDetectionViewController.swift": [527593540, 0]

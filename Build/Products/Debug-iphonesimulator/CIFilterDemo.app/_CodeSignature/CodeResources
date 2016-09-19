@@ -58,6 +58,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>FaceDetection.storyboardc/Info.plist</key>
+		<data>
+		tlWd4lLFms+r92iUrn4viGgUd8k=
+		</data>
+		<key>FaceDetection.storyboardc/UIViewController-bww-RO-uQk.nib</key>
+		<data>
+		9tJndNU8UkvIB4bCoUToBNQFxpI=
+		</data>
+		<key>FaceDetection.storyboardc/bww-RO-uQk-view-CiV-zn-W4X.nib</key>
+		<data>
+		hHRkPIPZF29ASurUHmcEMp6B4XY=
+		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		LF41Uh0Sp4L1Z3yICK12sjRbUjs=
@@ -108,7 +120,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QyczJ2glbzpDhYbPGGi/BxckUls=
+		ejU0ewDifno4jHf9PqnfGcPNfvk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -120,11 +132,11 @@
 		</data>
 		<key>complexFilter.storyboardc/MZm-WN-fBK-view-drZ-Be-vZm.nib</key>
 		<data>
-		XHI+h5QFyXODosg5B2lg7p4WeO4=
+		TWsKaHtg9qXdOsq/imcEfs1ODBM=
 		</data>
 		<key>complexFilter.storyboardc/UIViewController-MZm-WN-fBK.nib</key>
 		<data>
-		pOE8ZYUk/n4+s/c0WzB0WH+gJwc=
+		ZsMM52EoaR888zX/wMjwIhM436Q=
 		</data>
 		<key>image.png</key>
 		<data>
@@ -141,6 +153,10 @@
 		<key>image3.png</key>
 		<data>
 		lK50sK0N5DQVeoLxEW0YDt485po=
+		</data>
+		<key>image4@2x.png</key>
+		<data>
+		br4NgNU0SxHpmqmdgsMut3yquO8=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -226,6 +242,39 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>FaceDetection.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tlWd4lLFms+r92iUrn4viGgUd8k=
+			</data>
+			<key>hash2</key>
+			<data>
+			3vB1gnP0fezQvOL/5X6Vo92bAKaqsKqwg2oiJXF1YFM=
+			</data>
+		</dict>
+		<key>FaceDetection.storyboardc/UIViewController-bww-RO-uQk.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9tJndNU8UkvIB4bCoUToBNQFxpI=
+			</data>
+			<key>hash2</key>
+			<data>
+			L0KcFnKknOcUdbwBCQzzx3bPnUTqzUy1UDDEj89jCa0=
+			</data>
+		</dict>
+		<key>FaceDetection.storyboardc/bww-RO-uQk-view-CiV-zn-W4X.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hHRkPIPZF29ASurUHmcEMp6B4XY=
+			</data>
+			<key>hash2</key>
+			<data>
+			b1cd97zzpt9VRLQIvjWnPwXH7Z4ijTUfDAnK3FiwzK4=
+			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<dict>
@@ -374,22 +423,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XHI+h5QFyXODosg5B2lg7p4WeO4=
+			TWsKaHtg9qXdOsq/imcEfs1ODBM=
 			</data>
 			<key>hash2</key>
 			<data>
-			5dqXhvk46fhpvIu4FbLx0G0OzqBE3NcAN0WX/yJxcno=
+			6j+Rer8XPmFH8+Cuf/GXIOkixXjedBq2ki3FNvOnmUY=
 			</data>
 		</dict>
 		<key>complexFilter.storyboardc/UIViewController-MZm-WN-fBK.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pOE8ZYUk/n4+s/c0WzB0WH+gJwc=
+			ZsMM52EoaR888zX/wMjwIhM436Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJn1s+8BdskQId0qbRpjceKo9Apcjhhg/uMzLd+BgxU=
+			SnBoE1+WH6IWbOxEiJBqumFbdfbUExI6jo0Nxn3iHP4=
 			</data>
 		</dict>
 		<key>image.png</key>
@@ -434,6 +483,17 @@
 			<key>hash2</key>
 			<data>
 			h2FnDBQ+X65N90i7N7agZB4bZZikP25GqAGfqnEn/9I=
+			</data>
+		</dict>
+		<key>image4@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			br4NgNU0SxHpmqmdgsMut3yquO8=
+			</data>
+			<key>hash2</key>
+			<data>
+			9aH2g+6wtaPyk+hld+ytPk7bF+Qs5Ev5hgOC3RT/SJw=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

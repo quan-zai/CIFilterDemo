@@ -6,16 +6,16 @@ provides-nominal:
 provides-member:
 - ["C12CIFilterDemo13CIColorInvert", ""]
 provides-dynamic-lookup:
-- "inputImage"
 - "outputImage"
+- "inputImage"
 depends-top-level:
-- "CIColorInvert"
-- !private "CIVector"
 - "CIFilter"
 - !private "kCIInputImageKey"
 - "CIImage"
-- !private "StringLiteralType"
+- !private "CIVector"
 - !private "Dictionary"
+- !private "StringLiteralType"
+- "CIColorInvert"
 depends-member:
 - !private ["Ps9AnyObject", "CIFilter"]
 - !private ["Ps9AnyObject", "CIVector"]

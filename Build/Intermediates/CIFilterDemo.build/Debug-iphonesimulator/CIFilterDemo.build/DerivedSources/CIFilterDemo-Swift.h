@@ -168,6 +168,18 @@ SWIFT_CLASS("_TtC12CIFilterDemo27ComplexFilterViewController")
 @end
 
 
+SWIFT_CLASS("_TtC12CIFilterDemo27FaceDetectionViewController")
+@interface FaceDetectionViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, strong) UIImage * _Nonnull originalImage;
+@property (nonatomic, strong) CIContext * _Nonnull context;
+- (IBAction)faceDetecting:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12CIFilterDemo14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;

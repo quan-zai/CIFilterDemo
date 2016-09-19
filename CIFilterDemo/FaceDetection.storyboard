@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bww-RO-uQk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Face Detection View Controller-->
+        <scene sceneID="zIF-yk-Ou2">
+            <objects>
+                <viewController id="bww-RO-uQk" customClass="FaceDetectionViewController" customModule="CIFilterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Eg-N4-f1o"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTj-Hk-U3o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CiV-zn-W4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g6p-FP-TLZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="lrE-8Y-2Oo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKI-gw-ri0">
+                                <state key="normal" title="人脸检测"/>
+                                <connections>
+                                    <action selector="faceDetecting:" destination="bww-RO-uQk" eventType="touchUpInside" id="M3Y-3M-tml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g6p-FP-TLZ" firstAttribute="top" secondItem="3Eg-N4-f1o" secondAttribute="bottom" constant="8" id="2DO-mC-Eta"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g6p-FP-TLZ" secondAttribute="trailing" constant="4" id="8P3-eZ-tlS"/>
+                            <constraint firstItem="g6p-FP-TLZ" firstAttribute="centerX" secondItem="CiV-zn-W4X" secondAttribute="centerX" id="Oxs-rR-zfV"/>
+                            <constraint firstItem="WKI-gw-ri0" firstAttribute="centerX" secondItem="CiV-zn-W4X" secondAttribute="centerX" id="YeY-xb-Vhu"/>
+                            <constraint firstItem="jTj-Hk-U3o" firstAttribute="top" secondItem="WKI-gw-ri0" secondAttribute="bottom" constant="79" id="e1z-Yb-X9c"/>
+                            <constraint firstItem="g6p-FP-TLZ" firstAttribute="leading" secondItem="CiV-zn-W4X" secondAttribute="leadingMargin" constant="4" id="mi9-Lz-zEd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="g6p-FP-TLZ" id="oFd-ZR-Idb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8c-iN-QDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="-370"/>
+        </scene>
+    </scenes>
+</document>
