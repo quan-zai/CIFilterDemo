@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CIFilterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-ZM-8OD" userLabel="origin image">
+                                <state key="normal" title="原图"/>
+                                <connections>
+                                    <action selector="showOriginalImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Erf-yN-C9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axP-4q-plC" userLabel="auto adjust">
+                                <state key="normal" title="自动改善"/>
+                                <connections>
+                                    <action selector="autoAdjust:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fu-iz-qn5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-84-XwS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="2Rw-ZQ-9Y1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="L3b-84-XwS" secondAttribute="trailing" constant="24" id="BEj-6j-7Xf"/>
+                            <constraint firstItem="L3b-84-XwS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="EBo-yw-DJs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="axP-4q-plC" secondAttribute="bottom" constant="36" id="OH6-At-G8f"/>
+                            <constraint firstItem="L3b-84-XwS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="Vt8-eC-Pi9"/>
+                            <constraint firstItem="UPm-ZM-8OD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="a3v-mw-KBC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="axP-4q-plC" secondAttribute="trailing" constant="13" id="eOb-bT-U6s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UPm-ZM-8OD" secondAttribute="bottom" constant="36" id="uW7-1o-aAY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="L3b-84-XwS" id="Z17-cn-NpM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-86"/>
+        </scene>
+    </scenes>
+</document>

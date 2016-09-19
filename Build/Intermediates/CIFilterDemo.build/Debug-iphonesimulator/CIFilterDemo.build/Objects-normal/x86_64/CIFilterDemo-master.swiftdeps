@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "779755a53285a82f754c06f19aa24d89"
+build_time: [527508842, 157323000]
+inputs:
+  "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/ComplexFilterViewController.swift": [527508842, 0]
+  "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/ViewController.swift": [527495804, 0]
+  "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/AppDelegate.swift": [527495564, 0]

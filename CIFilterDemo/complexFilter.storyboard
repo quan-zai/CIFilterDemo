@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MZm-WN-fBK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Complex Filter View Controller-->
+        <scene sceneID="vi6-tF-ZgF">
+            <objects>
+                <viewController id="MZm-WN-fBK" customClass="ComplexFilterViewController" customModule="CIFilterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1EL-aT-dlq"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFb-Sv-jTp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="drZ-Be-vZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PXr-c0-baS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="0jF-jh-YaT"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-Tj-6ww"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDx-5R-jWO">
+                                <state key="normal" title="老电影"/>
+                                <connections>
+                                    <action selector="oldFilmEffect:" destination="MZm-WN-fBK" eventType="touchUpInside" id="tVX-Y1-YxO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PXr-c0-baS" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="14" id="1hv-ML-mqZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PXr-c0-baS" secondAttribute="trailing" constant="14" id="R79-BM-cHA"/>
+                            <constraint firstItem="BDx-5R-jWO" firstAttribute="centerX" secondItem="drZ-Be-vZm" secondAttribute="centerX" id="ToO-2a-235"/>
+                            <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="dEw-Tj-6ww" secondAttribute="bottom" constant="87" id="aaJ-ry-Onf"/>
+                            <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="BDx-5R-jWO" secondAttribute="bottom" constant="20" id="bQ7-7q-JQJ"/>
+                            <constraint firstItem="dEw-Tj-6ww" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="14" id="cO4-7w-e8C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEw-Tj-6ww" secondAttribute="trailing" constant="14" id="oNl-Qv-SjE"/>
+                            <constraint firstItem="PXr-c0-baS" firstAttribute="top" secondItem="1EL-aT-dlq" secondAttribute="bottom" constant="25" id="zAc-y7-zAf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PXr-c0-baS" id="ZiH-PG-pIe"/>
+                        <outlet property="slider" destination="dEw-Tj-6ww" id="stA-bl-G3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnn-Nt-WmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="-510"/>
+        </scene>
+    </scenes>
+</document>
