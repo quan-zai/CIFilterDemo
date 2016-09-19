@@ -31,15 +31,39 @@
                                     <action selector="oldFilmEffect:" destination="MZm-WN-fBK" eventType="touchUpInside" id="tVX-Y1-YxO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-US-ig4">
+                                <state key="normal" title="反色"/>
+                                <connections>
+                                    <action selector="colorInvert:" destination="MZm-WN-fBK" eventType="touchUpInside" id="UZH-5f-YRM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-dE-SKV">
+                                <state key="normal" title="原图"/>
+                                <connections>
+                                    <action selector="showOriginalImage:" destination="MZm-WN-fBK" eventType="touchUpInside" id="UTH-y6-ecB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrG-xw-fmv">
+                                <state key="normal" title="更改背景"/>
+                                <connections>
+                                    <action selector="replaceBackground:" destination="MZm-WN-fBK" eventType="touchUpInside" id="474-AU-IEk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PXr-c0-baS" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="14" id="1hv-ML-mqZ"/>
+                            <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="Utb-US-ig4" secondAttribute="bottom" constant="20" id="4Hk-3k-EsD"/>
+                            <constraint firstItem="dEw-Tj-6ww" firstAttribute="top" secondItem="MrG-xw-fmv" secondAttribute="bottom" constant="37" id="Aku-UY-eI5"/>
+                            <constraint firstItem="dEw-Tj-6ww" firstAttribute="top" secondItem="Lu5-dE-SKV" secondAttribute="bottom" constant="37" id="FJ5-U2-7Zj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PXr-c0-baS" secondAttribute="trailing" constant="14" id="R79-BM-cHA"/>
-                            <constraint firstItem="BDx-5R-jWO" firstAttribute="centerX" secondItem="drZ-Be-vZm" secondAttribute="centerX" id="ToO-2a-235"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MrG-xw-fmv" secondAttribute="trailing" constant="42" id="SG8-ic-e3I"/>
+                            <constraint firstItem="Utb-US-ig4" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="40" id="Sc5-d0-W6F"/>
                             <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="dEw-Tj-6ww" secondAttribute="bottom" constant="87" id="aaJ-ry-Onf"/>
                             <constraint firstItem="jFb-Sv-jTp" firstAttribute="top" secondItem="BDx-5R-jWO" secondAttribute="bottom" constant="20" id="bQ7-7q-JQJ"/>
                             <constraint firstItem="dEw-Tj-6ww" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="14" id="cO4-7w-e8C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BDx-5R-jWO" secondAttribute="trailing" constant="50" id="dPm-Ed-XjM"/>
+                            <constraint firstItem="Lu5-dE-SKV" firstAttribute="leading" secondItem="drZ-Be-vZm" secondAttribute="leadingMargin" constant="40" id="eSj-xz-ABD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dEw-Tj-6ww" secondAttribute="trailing" constant="14" id="oNl-Qv-SjE"/>
                             <constraint firstItem="PXr-c0-baS" firstAttribute="top" secondItem="1EL-aT-dlq" secondAttribute="bottom" constant="25" id="zAc-y7-zAf"/>
                         </constraints>
@@ -51,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnn-Nt-WmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="-510"/>
+            <point key="canvasLocation" x="356" y="-549"/>
         </scene>
     </scenes>
 </document>

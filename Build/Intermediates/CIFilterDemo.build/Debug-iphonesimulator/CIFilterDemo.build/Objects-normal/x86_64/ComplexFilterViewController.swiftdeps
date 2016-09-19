@@ -7,54 +7,65 @@ provides-member:
 - ["C12CIFilterDemo27ComplexFilterViewController", ""]
 provides-dynamic-lookup:
 - "filter"
-- "oldFilmEffect"
 - "imageView"
 - "viewDidLoad"
 - "slider"
 - "valueChanged"
+- "colorInvert"
+- "showOriginalImage"
+- "replaceBackground"
 - "showFiltersInconsole"
 - "context"
+- "oldFilmEffect"
 - "originalImage"
 depends-top-level:
-- "UIImageView"
-- "ComplexFilterViewController"
-- !private "NSValue"
-- !private "kCIInputAngleKey"
-- !private "String"
-- !private "CGSize"
-- !private "CIImage"
-- !private "UIColor"
-- !private "StringLiteralType"
-- !private "-"
-- !private "kCIInputTransformKey"
-- !private "kCIInputBackgroundImageKey"
-- !private "print"
-- !private "kCIInputImageKey"
-- !private "kCIInputIntensityKey"
-- "UIImage"
-- !private "kCICategoryBuiltIn"
-- "CIContext"
-- "CastingPrecedence"
-- "UISlider"
-- "AssignmentPrecedence"
-- !private "UIControlEvents"
-- !private "Float"
-- "UIViewController"
-- "CIFilter"
-- !private "M_PI"
-- "UIButton"
-- !private "CIVector"
 - !private "CGAffineTransform"
+- "UIImageView"
+- !private "kCIInputAngleKey"
+- "UIButton"
+- "CIFilter"
+- !private "CGSize"
+- "ComplexFilterViewController"
+- !private "BooleanLiteralType"
+- !private "kCIInputImageKey"
+- !private "-"
+- !private "NSValue"
+- !private "Int"
+- !private "StringLiteralType"
+- !private "NSData"
+- !private "kCIInputIntensityKey"
+- !private "createCubeMap"
+- !private "CIImage"
+- !private "kCIInputTransformKey"
+- !private "print"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "String"
+- "UISlider"
+- "CIContext"
+- "UIImage"
+- !private "UIColor"
+- !private "Float"
+- !private "kCIInputBackgroundImageKey"
+- !private "kCICategoryBuiltIn"
+- !private "UIControlEvents"
+- !private "CIVector"
+- !private "CIColorInvert"
+- !private "M_PI"
+- "UIViewController"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGSize"]
+- !private ["Ps9AnyObject", "CIColorInvert"]
 - !private ["Ps9AnyObject", "CIContext"]
 - !private ["Ps9AnyObject", "CIFilter"]
 - !private ["Ps9AnyObject", "CIImage"]
 - !private ["Ps9AnyObject", "CIVector"]
 - !private ["Ps9AnyObject", "Float"]
+- !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "M_PI"]
+- !private ["Ps9AnyObject", "NSData"]
 - !private ["Ps9AnyObject", "NSValue"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIControlEvents"]
@@ -63,9 +74,11 @@ depends-member:
 - !private ["Ps9AnyObject", "attributes"]
 - !private ["Ps9AnyObject", "black"]
 - !private ["Ps9AnyObject", "cgColor"]
+- ["Ps9AnyObject", "colorInvert"]
 - ["Ps9AnyObject", "context"]
 - ["Ps9AnyObject", "context.storage"]
 - !private ["Ps9AnyObject", "createCGImage"]
+- !private ["Ps9AnyObject", "createCubeMap"]
 - !private ["Ps9AnyObject", "cropping"]
 - !private ["Ps9AnyObject", "extent"]
 - ["Ps9AnyObject", "filter"]
@@ -73,6 +86,7 @@ depends-member:
 - !private ["Ps9AnyObject", "image"]
 - ["Ps9AnyObject", "imageView"]
 - !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "inputImage"]
 - !private ["Ps9AnyObject", "kCICategoryBuiltIn"]
 - !private ["Ps9AnyObject", "kCIInputAngleKey"]
 - !private ["Ps9AnyObject", "kCIInputBackgroundImageKey"]
@@ -87,12 +101,14 @@ depends-member:
 - ["Ps9AnyObject", "originalImage.storage"]
 - !private ["Ps9AnyObject", "outputImage"]
 - !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "replaceBackground"]
 - !private ["Ps9AnyObject", "sendActions"]
 - !private ["Ps9AnyObject", "setValue"]
 - !private ["Ps9AnyObject", "shadowColor"]
 - !private ["Ps9AnyObject", "shadowOffset"]
 - !private ["Ps9AnyObject", "shadowOpacity"]
 - ["Ps9AnyObject", "showFiltersInconsole"]
+- ["Ps9AnyObject", "showOriginalImage"]
 - ["Ps9AnyObject", "slider"]
 - !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", "valueChanged"]
@@ -112,6 +128,7 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "count"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
+- !private ["Ps17BitwiseOperations", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - ["CSo7CALayer", "deinit"]
@@ -136,6 +153,10 @@ depends-member:
 - ["VSC6CGRect", "deinit"]
 - ["VSC6CGSize", "deinit"]
 - !private ["VSC6CGSize", "init"]
+- ["C12CIFilterDemo13CIColorInvert", "deinit"]
+- !private ["C12CIFilterDemo13CIColorInvert", "init"]
+- !private ["C12CIFilterDemo13CIColorInvert", "inputImage"]
+- !private ["C12CIFilterDemo13CIColorInvert", "outputImage"]
 - !private ["CSo9CIContext", "createCGImage"]
 - ["CSo9CIContext", "deinit"]
 - !private ["CSo9CIContext", "init"]
@@ -143,6 +164,7 @@ depends-member:
 - ["CSo8CIFilter", "deinit"]
 - !private ["CSo8CIFilter", "filterNames"]
 - !private ["CSo8CIFilter", "init"]
+- !private ["CSo8CIFilter", "inputImage"]
 - !private ["CSo8CIFilter", "outputImage"]
 - !private ["CSo8CIFilter", "setValue"]
 - !private ["CSo7CIImage", "cropping"]
@@ -153,14 +175,17 @@ depends-member:
 - !private ["CSo8CIVector", "init"]
 - !private ["Ps7CVarArg", "CGAffineTransform"]
 - !private ["Ps7CVarArg", "CGSize"]
+- !private ["Ps7CVarArg", "CIColorInvert"]
 - !private ["Ps7CVarArg", "CIContext"]
 - !private ["Ps7CVarArg", "CIFilter"]
 - !private ["Ps7CVarArg", "CIImage"]
 - !private ["Ps7CVarArg", "CIVector"]
 - !private ["Ps7CVarArg", "Float"]
 - !private ["Ps7CVarArg", "IndexDistance"]
+- !private ["Ps7CVarArg", "Int"]
 - !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "M_PI"]
+- !private ["Ps7CVarArg", "NSData"]
 - !private ["Ps7CVarArg", "NSValue"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UIControlEvents"]
@@ -170,10 +195,12 @@ depends-member:
 - !private ["Ps7CVarArg", "attributes"]
 - !private ["Ps7CVarArg", "black"]
 - !private ["Ps7CVarArg", "cgColor"]
+- ["Ps7CVarArg", "colorInvert"]
 - ["Ps7CVarArg", "context"]
 - ["Ps7CVarArg", "context.storage"]
 - !private ["Ps7CVarArg", "count"]
 - !private ["Ps7CVarArg", "createCGImage"]
+- !private ["Ps7CVarArg", "createCubeMap"]
 - !private ["Ps7CVarArg", "cropping"]
 - !private ["Ps7CVarArg", "extent"]
 - ["Ps7CVarArg", "filter"]
@@ -181,6 +208,7 @@ depends-member:
 - !private ["Ps7CVarArg", "image"]
 - ["Ps7CVarArg", "imageView"]
 - !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "inputImage"]
 - !private ["Ps7CVarArg", "kCICategoryBuiltIn"]
 - !private ["Ps7CVarArg", "kCIInputAngleKey"]
 - !private ["Ps7CVarArg", "kCIInputBackgroundImageKey"]
@@ -195,12 +223,14 @@ depends-member:
 - ["Ps7CVarArg", "originalImage.storage"]
 - !private ["Ps7CVarArg", "outputImage"]
 - !private ["Ps7CVarArg", "print"]
+- ["Ps7CVarArg", "replaceBackground"]
 - !private ["Ps7CVarArg", "sendActions"]
 - !private ["Ps7CVarArg", "setValue"]
 - !private ["Ps7CVarArg", "shadowColor"]
 - !private ["Ps7CVarArg", "shadowOffset"]
 - !private ["Ps7CVarArg", "shadowOpacity"]
 - ["Ps7CVarArg", "showFiltersInconsole"]
+- ["Ps7CVarArg", "showOriginalImage"]
 - ["Ps7CVarArg", "slider"]
 - !private ["Ps7CVarArg", "value"]
 - ["Ps7CVarArg", "valueChanged"]
@@ -213,12 +243,15 @@ depends-member:
 - !private ["Ps10Comparable", "init"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "CGAffineTransform"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "CGSize"]
+- !private ["C12CIFilterDemo27ComplexFilterViewController", "CIColorInvert"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "CIContext"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "CIFilter"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "CIImage"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "CIVector"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "Float"]
+- !private ["C12CIFilterDemo27ComplexFilterViewController", "Int"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "M_PI"]
+- !private ["C12CIFilterDemo27ComplexFilterViewController", "NSData"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "NSValue"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "String"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "UIButton"]
@@ -227,8 +260,10 @@ depends-member:
 - ["C12CIFilterDemo27ComplexFilterViewController", "UIImage"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "UIImageView"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "UISlider"]
+- ["C12CIFilterDemo27ComplexFilterViewController", "colorInvert"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "context"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "context.storage"]
+- !private ["C12CIFilterDemo27ComplexFilterViewController", "createCubeMap"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "deinit"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "filter"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "imageView"]
@@ -243,20 +278,29 @@ depends-member:
 - ["C12CIFilterDemo27ComplexFilterViewController", "originalImage"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "originalImage.storage"]
 - !private ["C12CIFilterDemo27ComplexFilterViewController", "print"]
+- ["C12CIFilterDemo27ComplexFilterViewController", "replaceBackground"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "showFiltersInconsole"]
+- ["C12CIFilterDemo27ComplexFilterViewController", "showOriginalImage"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "slider"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "valueChanged"]
 - ["C12CIFilterDemo27ComplexFilterViewController", "viewDidLoad"]
+- !private ["VSC7CubeMap", "data"]
+- ["VSC7CubeMap", "deinit"]
+- !private ["VSC7CubeMap", "dimension"]
+- !private ["VSC7CubeMap", "length"]
 - !private ["Ps28CustomDebugStringConvertible", "CGAffineTransform"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSize"]
+- !private ["Ps28CustomDebugStringConvertible", "CIColorInvert"]
 - !private ["Ps28CustomDebugStringConvertible", "CIContext"]
 - !private ["Ps28CustomDebugStringConvertible", "CIFilter"]
 - !private ["Ps28CustomDebugStringConvertible", "CIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "CIVector"]
 - !private ["Ps28CustomDebugStringConvertible", "Float"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Int"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "M_PI"]
+- !private ["Ps28CustomDebugStringConvertible", "NSData"]
 - !private ["Ps28CustomDebugStringConvertible", "NSValue"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlEvents"]
@@ -266,10 +310,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "attributes"]
 - !private ["Ps28CustomDebugStringConvertible", "black"]
 - !private ["Ps28CustomDebugStringConvertible", "cgColor"]
+- ["Ps28CustomDebugStringConvertible", "colorInvert"]
 - ["Ps28CustomDebugStringConvertible", "context"]
 - ["Ps28CustomDebugStringConvertible", "context.storage"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "createCGImage"]
+- !private ["Ps28CustomDebugStringConvertible", "createCubeMap"]
 - !private ["Ps28CustomDebugStringConvertible", "cropping"]
 - !private ["Ps28CustomDebugStringConvertible", "extent"]
 - ["Ps28CustomDebugStringConvertible", "filter"]
@@ -277,6 +323,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "image"]
 - ["Ps28CustomDebugStringConvertible", "imageView"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "inputImage"]
 - !private ["Ps28CustomDebugStringConvertible", "kCICategoryBuiltIn"]
 - !private ["Ps28CustomDebugStringConvertible", "kCIInputAngleKey"]
 - !private ["Ps28CustomDebugStringConvertible", "kCIInputBackgroundImageKey"]
@@ -291,12 +338,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "originalImage.storage"]
 - !private ["Ps28CustomDebugStringConvertible", "outputImage"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "replaceBackground"]
 - !private ["Ps28CustomDebugStringConvertible", "sendActions"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
 - !private ["Ps28CustomDebugStringConvertible", "shadowColor"]
 - !private ["Ps28CustomDebugStringConvertible", "shadowOffset"]
 - !private ["Ps28CustomDebugStringConvertible", "shadowOpacity"]
 - ["Ps28CustomDebugStringConvertible", "showFiltersInconsole"]
+- ["Ps28CustomDebugStringConvertible", "showOriginalImage"]
 - ["Ps28CustomDebugStringConvertible", "slider"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", "valueChanged"]
@@ -312,14 +361,17 @@ depends-member:
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps23CustomStringConvertible", "CGAffineTransform"]
 - !private ["Ps23CustomStringConvertible", "CGSize"]
+- !private ["Ps23CustomStringConvertible", "CIColorInvert"]
 - !private ["Ps23CustomStringConvertible", "CIContext"]
 - !private ["Ps23CustomStringConvertible", "CIFilter"]
 - !private ["Ps23CustomStringConvertible", "CIImage"]
 - !private ["Ps23CustomStringConvertible", "CIVector"]
 - !private ["Ps23CustomStringConvertible", "Float"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
+- !private ["Ps23CustomStringConvertible", "Int"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "M_PI"]
+- !private ["Ps23CustomStringConvertible", "NSData"]
 - !private ["Ps23CustomStringConvertible", "NSValue"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIControlEvents"]
@@ -330,10 +382,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "attributes"]
 - !private ["Ps23CustomStringConvertible", "black"]
 - !private ["Ps23CustomStringConvertible", "cgColor"]
+- ["Ps23CustomStringConvertible", "colorInvert"]
 - ["Ps23CustomStringConvertible", "context"]
 - ["Ps23CustomStringConvertible", "context.storage"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "createCGImage"]
+- !private ["Ps23CustomStringConvertible", "createCubeMap"]
 - !private ["Ps23CustomStringConvertible", "cropping"]
 - !private ["Ps23CustomStringConvertible", "extent"]
 - ["Ps23CustomStringConvertible", "filter"]
@@ -341,6 +395,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "image"]
 - ["Ps23CustomStringConvertible", "imageView"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "inputImage"]
 - !private ["Ps23CustomStringConvertible", "kCICategoryBuiltIn"]
 - !private ["Ps23CustomStringConvertible", "kCIInputAngleKey"]
 - !private ["Ps23CustomStringConvertible", "kCIInputBackgroundImageKey"]
@@ -355,12 +410,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "originalImage.storage"]
 - !private ["Ps23CustomStringConvertible", "outputImage"]
 - !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "replaceBackground"]
 - !private ["Ps23CustomStringConvertible", "sendActions"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - !private ["Ps23CustomStringConvertible", "shadowColor"]
 - !private ["Ps23CustomStringConvertible", "shadowOffset"]
 - !private ["Ps23CustomStringConvertible", "shadowOpacity"]
 - ["Ps23CustomStringConvertible", "showFiltersInconsole"]
+- ["Ps23CustomStringConvertible", "showOriginalImage"]
 - ["Ps23CustomStringConvertible", "slider"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "valueChanged"]
@@ -370,12 +427,15 @@ depends-member:
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGAffineTransform"]
 - !private ["Ps9Equatable", "CGSize"]
+- !private ["Ps9Equatable", "CIColorInvert"]
 - !private ["Ps9Equatable", "CIContext"]
 - !private ["Ps9Equatable", "CIFilter"]
 - !private ["Ps9Equatable", "CIImage"]
 - !private ["Ps9Equatable", "CIVector"]
 - !private ["Ps9Equatable", "Float"]
+- !private ["Ps9Equatable", "Int"]
 - !private ["Ps9Equatable", "M_PI"]
+- !private ["Ps9Equatable", "NSData"]
 - !private ["Ps9Equatable", "NSValue"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIControlEvents"]
@@ -385,9 +445,11 @@ depends-member:
 - !private ["Ps9Equatable", "attributes"]
 - !private ["Ps9Equatable", "black"]
 - !private ["Ps9Equatable", "cgColor"]
+- ["Ps9Equatable", "colorInvert"]
 - ["Ps9Equatable", "context"]
 - ["Ps9Equatable", "context.storage"]
 - !private ["Ps9Equatable", "createCGImage"]
+- !private ["Ps9Equatable", "createCubeMap"]
 - !private ["Ps9Equatable", "cropping"]
 - !private ["Ps9Equatable", "extent"]
 - ["Ps9Equatable", "filter"]
@@ -395,6 +457,7 @@ depends-member:
 - !private ["Ps9Equatable", "image"]
 - ["Ps9Equatable", "imageView"]
 - !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "inputImage"]
 - !private ["Ps9Equatable", "kCICategoryBuiltIn"]
 - !private ["Ps9Equatable", "kCIInputAngleKey"]
 - !private ["Ps9Equatable", "kCIInputBackgroundImageKey"]
@@ -409,12 +472,14 @@ depends-member:
 - ["Ps9Equatable", "originalImage.storage"]
 - !private ["Ps9Equatable", "outputImage"]
 - !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "replaceBackground"]
 - !private ["Ps9Equatable", "sendActions"]
 - !private ["Ps9Equatable", "setValue"]
 - !private ["Ps9Equatable", "shadowColor"]
 - !private ["Ps9Equatable", "shadowOffset"]
 - !private ["Ps9Equatable", "shadowOpacity"]
 - ["Ps9Equatable", "showFiltersInconsole"]
+- ["Ps9Equatable", "showOriginalImage"]
 - ["Ps9Equatable", "slider"]
 - !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", "valueChanged"]
@@ -437,12 +502,15 @@ depends-member:
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["Ps8Hashable", "CGAffineTransform"]
 - !private ["Ps8Hashable", "CGSize"]
+- !private ["Ps8Hashable", "CIColorInvert"]
 - !private ["Ps8Hashable", "CIContext"]
 - !private ["Ps8Hashable", "CIFilter"]
 - !private ["Ps8Hashable", "CIImage"]
 - !private ["Ps8Hashable", "CIVector"]
 - !private ["Ps8Hashable", "Float"]
+- !private ["Ps8Hashable", "Int"]
 - !private ["Ps8Hashable", "M_PI"]
+- !private ["Ps8Hashable", "NSData"]
 - !private ["Ps8Hashable", "NSValue"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIControlEvents"]
@@ -452,9 +520,11 @@ depends-member:
 - !private ["Ps8Hashable", "attributes"]
 - !private ["Ps8Hashable", "black"]
 - !private ["Ps8Hashable", "cgColor"]
+- ["Ps8Hashable", "colorInvert"]
 - ["Ps8Hashable", "context"]
 - ["Ps8Hashable", "context.storage"]
 - !private ["Ps8Hashable", "createCGImage"]
+- !private ["Ps8Hashable", "createCubeMap"]
 - !private ["Ps8Hashable", "cropping"]
 - !private ["Ps8Hashable", "extent"]
 - ["Ps8Hashable", "filter"]
@@ -462,6 +532,7 @@ depends-member:
 - !private ["Ps8Hashable", "image"]
 - ["Ps8Hashable", "imageView"]
 - !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "inputImage"]
 - !private ["Ps8Hashable", "kCICategoryBuiltIn"]
 - !private ["Ps8Hashable", "kCIInputAngleKey"]
 - !private ["Ps8Hashable", "kCIInputBackgroundImageKey"]
@@ -476,12 +547,14 @@ depends-member:
 - ["Ps8Hashable", "originalImage.storage"]
 - !private ["Ps8Hashable", "outputImage"]
 - !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "replaceBackground"]
 - !private ["Ps8Hashable", "sendActions"]
 - !private ["Ps8Hashable", "setValue"]
 - !private ["Ps8Hashable", "shadowColor"]
 - !private ["Ps8Hashable", "shadowOffset"]
 - !private ["Ps8Hashable", "shadowOpacity"]
 - ["Ps8Hashable", "showFiltersInconsole"]
+- ["Ps8Hashable", "showOriginalImage"]
 - ["Ps8Hashable", "slider"]
 - !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "valueChanged"]
@@ -498,6 +571,10 @@ depends-member:
 - !private ["Ps13IndexableBase", "count"]
 - !private ["Vs16IndexingIterator", "Element"]
 - ["Si", "deinit"]
+- !private ["Si", "init"]
+- ["Vs5Int32", "deinit"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "init"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
@@ -513,12 +590,15 @@ depends-member:
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "CGAffineTransform"]
 - !private ["PSo8NSCoding", "CGSize"]
+- !private ["PSo8NSCoding", "CIColorInvert"]
 - !private ["PSo8NSCoding", "CIContext"]
 - !private ["PSo8NSCoding", "CIFilter"]
 - !private ["PSo8NSCoding", "CIImage"]
 - !private ["PSo8NSCoding", "CIVector"]
 - !private ["PSo8NSCoding", "Float"]
+- !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "M_PI"]
+- !private ["PSo8NSCoding", "NSData"]
 - !private ["PSo8NSCoding", "NSValue"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIControlEvents"]
@@ -527,8 +607,10 @@ depends-member:
 - !private ["PSo8NSCoding", "attributes"]
 - !private ["PSo8NSCoding", "black"]
 - !private ["PSo8NSCoding", "cgColor"]
+- ["PSo8NSCoding", "colorInvert"]
 - ["PSo8NSCoding", "context"]
 - ["PSo8NSCoding", "context.storage"]
+- !private ["PSo8NSCoding", "createCubeMap"]
 - !private ["PSo8NSCoding", "cropping"]
 - !private ["PSo8NSCoding", "extent"]
 - ["PSo8NSCoding", "filter"]
@@ -536,6 +618,7 @@ depends-member:
 - !private ["PSo8NSCoding", "image"]
 - ["PSo8NSCoding", "imageView"]
 - !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "inputImage"]
 - !private ["PSo8NSCoding", "kCICategoryBuiltIn"]
 - !private ["PSo8NSCoding", "kCIInputAngleKey"]
 - !private ["PSo8NSCoding", "kCIInputBackgroundImageKey"]
@@ -550,12 +633,14 @@ depends-member:
 - ["PSo8NSCoding", "originalImage.storage"]
 - !private ["PSo8NSCoding", "outputImage"]
 - !private ["PSo8NSCoding", "print"]
+- ["PSo8NSCoding", "replaceBackground"]
 - !private ["PSo8NSCoding", "sendActions"]
 - !private ["PSo8NSCoding", "setValue"]
 - !private ["PSo8NSCoding", "shadowColor"]
 - !private ["PSo8NSCoding", "shadowOffset"]
 - !private ["PSo8NSCoding", "shadowOpacity"]
 - ["PSo8NSCoding", "showFiltersInconsole"]
+- ["PSo8NSCoding", "showOriginalImage"]
 - ["PSo8NSCoding", "slider"]
 - !private ["PSo8NSCoding", "value"]
 - ["PSo8NSCoding", "valueChanged"]
@@ -568,22 +653,30 @@ depends-member:
 - !private ["PSo9NSCopying", "extent"]
 - !private ["PSo9NSCopying", "filterNames"]
 - !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "inputImage"]
 - !private ["PSo9NSCopying", "outputImage"]
 - !private ["PSo9NSCopying", "setValue"]
+- ["CSo6NSData", "deinit"]
+- !private ["CSo6NSData", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "CGAffineTransform"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSize"]
+- !private ["PSo26NSExtensionRequestHandling", "CIColorInvert"]
 - !private ["PSo26NSExtensionRequestHandling", "CIContext"]
 - !private ["PSo26NSExtensionRequestHandling", "CIFilter"]
 - !private ["PSo26NSExtensionRequestHandling", "CIImage"]
 - !private ["PSo26NSExtensionRequestHandling", "CIVector"]
 - !private ["PSo26NSExtensionRequestHandling", "Float"]
+- !private ["PSo26NSExtensionRequestHandling", "Int"]
 - !private ["PSo26NSExtensionRequestHandling", "M_PI"]
+- !private ["PSo26NSExtensionRequestHandling", "NSData"]
 - !private ["PSo26NSExtensionRequestHandling", "NSValue"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIControlEvents"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- ["PSo26NSExtensionRequestHandling", "colorInvert"]
 - ["PSo26NSExtensionRequestHandling", "context"]
 - ["PSo26NSExtensionRequestHandling", "context.storage"]
+- !private ["PSo26NSExtensionRequestHandling", "createCubeMap"]
 - ["PSo26NSExtensionRequestHandling", "filter"]
 - ["PSo26NSExtensionRequestHandling", "imageView"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
@@ -597,7 +690,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "originalImage"]
 - ["PSo26NSExtensionRequestHandling", "originalImage.storage"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
+- ["PSo26NSExtensionRequestHandling", "replaceBackground"]
 - ["PSo26NSExtensionRequestHandling", "showFiltersInconsole"]
+- ["PSo26NSExtensionRequestHandling", "showOriginalImage"]
 - ["PSo26NSExtensionRequestHandling", "slider"]
 - ["PSo26NSExtensionRequestHandling", "valueChanged"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -605,12 +700,15 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "CGAffineTransform"]
 - !private ["CSo8NSObject", "CGSize"]
+- !private ["CSo8NSObject", "CIColorInvert"]
 - ["CSo8NSObject", "CIContext"]
 - ["CSo8NSObject", "CIFilter"]
 - !private ["CSo8NSObject", "CIImage"]
 - !private ["CSo8NSObject", "CIVector"]
 - !private ["CSo8NSObject", "Float"]
+- !private ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "M_PI"]
+- !private ["CSo8NSObject", "NSData"]
 - !private ["CSo8NSObject", "NSValue"]
 - !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIButton"]
@@ -623,9 +721,11 @@ depends-member:
 - !private ["CSo8NSObject", "attributes"]
 - !private ["CSo8NSObject", "black"]
 - !private ["CSo8NSObject", "cgColor"]
+- ["CSo8NSObject", "colorInvert"]
 - ["CSo8NSObject", "context"]
 - ["CSo8NSObject", "context.storage"]
 - !private ["CSo8NSObject", "createCGImage"]
+- !private ["CSo8NSObject", "createCubeMap"]
 - !private ["CSo8NSObject", "cropping"]
 - !private ["CSo8NSObject", "extent"]
 - ["CSo8NSObject", "filter"]
@@ -633,6 +733,7 @@ depends-member:
 - !private ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "imageView"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "inputImage"]
 - !private ["CSo8NSObject", "kCICategoryBuiltIn"]
 - !private ["CSo8NSObject", "kCIInputAngleKey"]
 - !private ["CSo8NSObject", "kCIInputBackgroundImageKey"]
@@ -647,24 +748,29 @@ depends-member:
 - ["CSo8NSObject", "originalImage.storage"]
 - !private ["CSo8NSObject", "outputImage"]
 - !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "replaceBackground"]
 - !private ["CSo8NSObject", "sendActions"]
 - !private ["CSo8NSObject", "setValue"]
 - !private ["CSo8NSObject", "shadowColor"]
 - !private ["CSo8NSObject", "shadowOffset"]
 - !private ["CSo8NSObject", "shadowOpacity"]
 - ["CSo8NSObject", "showFiltersInconsole"]
+- ["CSo8NSObject", "showOriginalImage"]
 - ["CSo8NSObject", "slider"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "valueChanged"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "CGAffineTransform"]
 - !private ["PSo16NSObjectProtocol", "CGSize"]
+- !private ["PSo16NSObjectProtocol", "CIColorInvert"]
 - !private ["PSo16NSObjectProtocol", "CIContext"]
 - !private ["PSo16NSObjectProtocol", "CIFilter"]
 - !private ["PSo16NSObjectProtocol", "CIImage"]
 - !private ["PSo16NSObjectProtocol", "CIVector"]
 - !private ["PSo16NSObjectProtocol", "Float"]
+- !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "M_PI"]
+- !private ["PSo16NSObjectProtocol", "NSData"]
 - !private ["PSo16NSObjectProtocol", "NSValue"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIControlEvents"]
@@ -673,9 +779,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "attributes"]
 - !private ["PSo16NSObjectProtocol", "black"]
 - !private ["PSo16NSObjectProtocol", "cgColor"]
+- ["PSo16NSObjectProtocol", "colorInvert"]
 - ["PSo16NSObjectProtocol", "context"]
 - ["PSo16NSObjectProtocol", "context.storage"]
 - !private ["PSo16NSObjectProtocol", "createCGImage"]
+- !private ["PSo16NSObjectProtocol", "createCubeMap"]
 - !private ["PSo16NSObjectProtocol", "cropping"]
 - !private ["PSo16NSObjectProtocol", "extent"]
 - ["PSo16NSObjectProtocol", "filter"]
@@ -683,6 +791,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "image"]
 - ["PSo16NSObjectProtocol", "imageView"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "inputImage"]
 - !private ["PSo16NSObjectProtocol", "kCICategoryBuiltIn"]
 - !private ["PSo16NSObjectProtocol", "kCIInputAngleKey"]
 - !private ["PSo16NSObjectProtocol", "kCIInputBackgroundImageKey"]
@@ -697,12 +806,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "originalImage.storage"]
 - !private ["PSo16NSObjectProtocol", "outputImage"]
 - !private ["PSo16NSObjectProtocol", "print"]
+- ["PSo16NSObjectProtocol", "replaceBackground"]
 - !private ["PSo16NSObjectProtocol", "sendActions"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - !private ["PSo16NSObjectProtocol", "shadowColor"]
 - !private ["PSo16NSObjectProtocol", "shadowOffset"]
 - !private ["PSo16NSObjectProtocol", "shadowOpacity"]
 - ["PSo16NSObjectProtocol", "showFiltersInconsole"]
+- ["PSo16NSObjectProtocol", "showOriginalImage"]
 - ["PSo16NSObjectProtocol", "slider"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "valueChanged"]
@@ -715,6 +826,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "extent"]
 - !private ["PSo14NSSecureCoding", "filterNames"]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "inputImage"]
 - !private ["PSo14NSSecureCoding", "outputImage"]
 - !private ["PSo14NSSecureCoding", "setValue"]
 - !private ["CSo8NSString", "init"]
@@ -746,6 +858,7 @@ depends-member:
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "count"]
 - !private ["Ps10SetAlgebra", "valueChanged"]
+- !private ["Ps13SignedInteger", "init"]
 - !private ["Ps12SignedNumber", "init"]
 - !private ["Ps10Strideable", "init"]
 - ["SS", "deinit"]
@@ -769,19 +882,24 @@ depends-member:
 - !private ["PSo12UIAppearance", "value"]
 - !private ["PSo21UIAppearanceContainer", "CGAffineTransform"]
 - !private ["PSo21UIAppearanceContainer", "CGSize"]
+- !private ["PSo21UIAppearanceContainer", "CIColorInvert"]
 - !private ["PSo21UIAppearanceContainer", "CIContext"]
 - !private ["PSo21UIAppearanceContainer", "CIFilter"]
 - !private ["PSo21UIAppearanceContainer", "CIImage"]
 - !private ["PSo21UIAppearanceContainer", "CIVector"]
 - !private ["PSo21UIAppearanceContainer", "Float"]
+- !private ["PSo21UIAppearanceContainer", "Int"]
 - !private ["PSo21UIAppearanceContainer", "M_PI"]
+- !private ["PSo21UIAppearanceContainer", "NSData"]
 - !private ["PSo21UIAppearanceContainer", "NSValue"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIControlEvents"]
 - !private ["PSo21UIAppearanceContainer", "UIImage"]
 - !private ["PSo21UIAppearanceContainer", "addTarget"]
+- ["PSo21UIAppearanceContainer", "colorInvert"]
 - ["PSo21UIAppearanceContainer", "context"]
 - ["PSo21UIAppearanceContainer", "context.storage"]
+- !private ["PSo21UIAppearanceContainer", "createCubeMap"]
 - ["PSo21UIAppearanceContainer", "filter"]
 - !private ["PSo21UIAppearanceContainer", "image"]
 - ["PSo21UIAppearanceContainer", "imageView"]
@@ -799,8 +917,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "originalImage"]
 - ["PSo21UIAppearanceContainer", "originalImage.storage"]
 - !private ["PSo21UIAppearanceContainer", "print"]
+- ["PSo21UIAppearanceContainer", "replaceBackground"]
 - !private ["PSo21UIAppearanceContainer", "sendActions"]
 - ["PSo21UIAppearanceContainer", "showFiltersInconsole"]
+- ["PSo21UIAppearanceContainer", "showOriginalImage"]
 - ["PSo21UIAppearanceContainer", "slider"]
 - !private ["PSo21UIAppearanceContainer", "value"]
 - ["PSo21UIAppearanceContainer", "valueChanged"]
@@ -811,18 +931,23 @@ depends-member:
 - ["CSo7UIColor", "deinit"]
 - !private ["PSo18UIContentContainer", "CGAffineTransform"]
 - !private ["PSo18UIContentContainer", "CGSize"]
+- !private ["PSo18UIContentContainer", "CIColorInvert"]
 - !private ["PSo18UIContentContainer", "CIContext"]
 - !private ["PSo18UIContentContainer", "CIFilter"]
 - !private ["PSo18UIContentContainer", "CIImage"]
 - !private ["PSo18UIContentContainer", "CIVector"]
 - !private ["PSo18UIContentContainer", "Float"]
+- !private ["PSo18UIContentContainer", "Int"]
 - !private ["PSo18UIContentContainer", "M_PI"]
+- !private ["PSo18UIContentContainer", "NSData"]
 - !private ["PSo18UIContentContainer", "NSValue"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIControlEvents"]
 - !private ["PSo18UIContentContainer", "UIImage"]
+- ["PSo18UIContentContainer", "colorInvert"]
 - ["PSo18UIContentContainer", "context"]
 - ["PSo18UIContentContainer", "context.storage"]
+- !private ["PSo18UIContentContainer", "createCubeMap"]
 - ["PSo18UIContentContainer", "filter"]
 - ["PSo18UIContentContainer", "imageView"]
 - !private ["PSo18UIContentContainer", "init"]
@@ -836,7 +961,9 @@ depends-member:
 - ["PSo18UIContentContainer", "originalImage"]
 - ["PSo18UIContentContainer", "originalImage.storage"]
 - !private ["PSo18UIContentContainer", "print"]
+- ["PSo18UIContentContainer", "replaceBackground"]
 - ["PSo18UIContentContainer", "showFiltersInconsole"]
+- ["PSo18UIContentContainer", "showOriginalImage"]
 - ["PSo18UIContentContainer", "slider"]
 - ["PSo18UIContentContainer", "valueChanged"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -864,19 +991,24 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "value"]
 - !private ["PSo18UIFocusEnvironment", "CGAffineTransform"]
 - !private ["PSo18UIFocusEnvironment", "CGSize"]
+- !private ["PSo18UIFocusEnvironment", "CIColorInvert"]
 - !private ["PSo18UIFocusEnvironment", "CIContext"]
 - !private ["PSo18UIFocusEnvironment", "CIFilter"]
 - !private ["PSo18UIFocusEnvironment", "CIImage"]
 - !private ["PSo18UIFocusEnvironment", "CIVector"]
 - !private ["PSo18UIFocusEnvironment", "Float"]
+- !private ["PSo18UIFocusEnvironment", "Int"]
 - !private ["PSo18UIFocusEnvironment", "M_PI"]
+- !private ["PSo18UIFocusEnvironment", "NSData"]
 - !private ["PSo18UIFocusEnvironment", "NSValue"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIControlEvents"]
 - !private ["PSo18UIFocusEnvironment", "UIImage"]
 - !private ["PSo18UIFocusEnvironment", "addTarget"]
+- ["PSo18UIFocusEnvironment", "colorInvert"]
 - ["PSo18UIFocusEnvironment", "context"]
 - ["PSo18UIFocusEnvironment", "context.storage"]
+- !private ["PSo18UIFocusEnvironment", "createCubeMap"]
 - ["PSo18UIFocusEnvironment", "filter"]
 - !private ["PSo18UIFocusEnvironment", "image"]
 - ["PSo18UIFocusEnvironment", "imageView"]
@@ -894,8 +1026,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "originalImage"]
 - ["PSo18UIFocusEnvironment", "originalImage.storage"]
 - !private ["PSo18UIFocusEnvironment", "print"]
+- ["PSo18UIFocusEnvironment", "replaceBackground"]
 - !private ["PSo18UIFocusEnvironment", "sendActions"]
 - ["PSo18UIFocusEnvironment", "showFiltersInconsole"]
+- ["PSo18UIFocusEnvironment", "showOriginalImage"]
 - ["PSo18UIFocusEnvironment", "slider"]
 - !private ["PSo18UIFocusEnvironment", "value"]
 - ["PSo18UIFocusEnvironment", "valueChanged"]
@@ -914,12 +1048,15 @@ depends-member:
 - !private ["CSo11UIImageView", "layer"]
 - !private ["CSo11UIResponder", "CGAffineTransform"]
 - !private ["CSo11UIResponder", "CGSize"]
+- !private ["CSo11UIResponder", "CIColorInvert"]
 - ["CSo11UIResponder", "CIContext"]
 - ["CSo11UIResponder", "CIFilter"]
 - !private ["CSo11UIResponder", "CIImage"]
 - !private ["CSo11UIResponder", "CIVector"]
 - !private ["CSo11UIResponder", "Float"]
+- !private ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "M_PI"]
+- !private ["CSo11UIResponder", "NSData"]
 - !private ["CSo11UIResponder", "NSValue"]
 - !private ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIButton"]
@@ -929,8 +1066,10 @@ depends-member:
 - ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UISlider"]
 - !private ["CSo11UIResponder", "addTarget"]
+- ["CSo11UIResponder", "colorInvert"]
 - ["CSo11UIResponder", "context"]
 - ["CSo11UIResponder", "context.storage"]
+- !private ["CSo11UIResponder", "createCubeMap"]
 - ["CSo11UIResponder", "filter"]
 - !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "imageView"]
@@ -948,27 +1087,34 @@ depends-member:
 - ["CSo11UIResponder", "originalImage"]
 - ["CSo11UIResponder", "originalImage.storage"]
 - !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "replaceBackground"]
 - !private ["CSo11UIResponder", "sendActions"]
 - ["CSo11UIResponder", "showFiltersInconsole"]
+- ["CSo11UIResponder", "showOriginalImage"]
 - ["CSo11UIResponder", "slider"]
 - !private ["CSo11UIResponder", "value"]
 - ["CSo11UIResponder", "valueChanged"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo30UIResponderStandardEditActions", "CGAffineTransform"]
 - !private ["PSo30UIResponderStandardEditActions", "CGSize"]
+- !private ["PSo30UIResponderStandardEditActions", "CIColorInvert"]
 - !private ["PSo30UIResponderStandardEditActions", "CIContext"]
 - !private ["PSo30UIResponderStandardEditActions", "CIFilter"]
 - !private ["PSo30UIResponderStandardEditActions", "CIImage"]
 - !private ["PSo30UIResponderStandardEditActions", "CIVector"]
 - !private ["PSo30UIResponderStandardEditActions", "Float"]
+- !private ["PSo30UIResponderStandardEditActions", "Int"]
 - !private ["PSo30UIResponderStandardEditActions", "M_PI"]
+- !private ["PSo30UIResponderStandardEditActions", "NSData"]
 - !private ["PSo30UIResponderStandardEditActions", "NSValue"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UIControlEvents"]
 - !private ["PSo30UIResponderStandardEditActions", "UIImage"]
 - !private ["PSo30UIResponderStandardEditActions", "addTarget"]
+- ["PSo30UIResponderStandardEditActions", "colorInvert"]
 - ["PSo30UIResponderStandardEditActions", "context"]
 - ["PSo30UIResponderStandardEditActions", "context.storage"]
+- !private ["PSo30UIResponderStandardEditActions", "createCubeMap"]
 - ["PSo30UIResponderStandardEditActions", "filter"]
 - !private ["PSo30UIResponderStandardEditActions", "image"]
 - ["PSo30UIResponderStandardEditActions", "imageView"]
@@ -986,8 +1132,10 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "originalImage"]
 - ["PSo30UIResponderStandardEditActions", "originalImage.storage"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
+- ["PSo30UIResponderStandardEditActions", "replaceBackground"]
 - !private ["PSo30UIResponderStandardEditActions", "sendActions"]
 - ["PSo30UIResponderStandardEditActions", "showFiltersInconsole"]
+- ["PSo30UIResponderStandardEditActions", "showOriginalImage"]
 - ["PSo30UIResponderStandardEditActions", "slider"]
 - !private ["PSo30UIResponderStandardEditActions", "value"]
 - ["PSo30UIResponderStandardEditActions", "valueChanged"]
@@ -1001,18 +1149,23 @@ depends-member:
 - !private ["CSo8UISlider", "value"]
 - !private ["PSo16UIStateRestoring", "CGAffineTransform"]
 - !private ["PSo16UIStateRestoring", "CGSize"]
+- !private ["PSo16UIStateRestoring", "CIColorInvert"]
 - !private ["PSo16UIStateRestoring", "CIContext"]
 - !private ["PSo16UIStateRestoring", "CIFilter"]
 - !private ["PSo16UIStateRestoring", "CIImage"]
 - !private ["PSo16UIStateRestoring", "CIVector"]
 - !private ["PSo16UIStateRestoring", "Float"]
+- !private ["PSo16UIStateRestoring", "Int"]
 - !private ["PSo16UIStateRestoring", "M_PI"]
+- !private ["PSo16UIStateRestoring", "NSData"]
 - !private ["PSo16UIStateRestoring", "NSValue"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIControlEvents"]
 - !private ["PSo16UIStateRestoring", "UIImage"]
+- ["PSo16UIStateRestoring", "colorInvert"]
 - ["PSo16UIStateRestoring", "context"]
 - ["PSo16UIStateRestoring", "context.storage"]
+- !private ["PSo16UIStateRestoring", "createCubeMap"]
 - ["PSo16UIStateRestoring", "filter"]
 - ["PSo16UIStateRestoring", "imageView"]
 - !private ["PSo16UIStateRestoring", "init"]
@@ -1026,26 +1179,33 @@ depends-member:
 - ["PSo16UIStateRestoring", "originalImage"]
 - ["PSo16UIStateRestoring", "originalImage.storage"]
 - !private ["PSo16UIStateRestoring", "print"]
+- ["PSo16UIStateRestoring", "replaceBackground"]
 - ["PSo16UIStateRestoring", "showFiltersInconsole"]
+- ["PSo16UIStateRestoring", "showOriginalImage"]
 - ["PSo16UIStateRestoring", "slider"]
 - ["PSo16UIStateRestoring", "valueChanged"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "CGAffineTransform"]
 - !private ["PSo18UITraitEnvironment", "CGSize"]
+- !private ["PSo18UITraitEnvironment", "CIColorInvert"]
 - !private ["PSo18UITraitEnvironment", "CIContext"]
 - !private ["PSo18UITraitEnvironment", "CIFilter"]
 - !private ["PSo18UITraitEnvironment", "CIImage"]
 - !private ["PSo18UITraitEnvironment", "CIVector"]
 - !private ["PSo18UITraitEnvironment", "Float"]
+- !private ["PSo18UITraitEnvironment", "Int"]
 - !private ["PSo18UITraitEnvironment", "M_PI"]
+- !private ["PSo18UITraitEnvironment", "NSData"]
 - !private ["PSo18UITraitEnvironment", "NSValue"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIControlEvents"]
 - !private ["PSo18UITraitEnvironment", "UIImage"]
 - !private ["PSo18UITraitEnvironment", "addTarget"]
+- ["PSo18UITraitEnvironment", "colorInvert"]
 - ["PSo18UITraitEnvironment", "context"]
 - ["PSo18UITraitEnvironment", "context.storage"]
+- !private ["PSo18UITraitEnvironment", "createCubeMap"]
 - ["PSo18UITraitEnvironment", "filter"]
 - !private ["PSo18UITraitEnvironment", "image"]
 - ["PSo18UITraitEnvironment", "imageView"]
@@ -1063,8 +1223,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "originalImage"]
 - ["PSo18UITraitEnvironment", "originalImage.storage"]
 - !private ["PSo18UITraitEnvironment", "print"]
+- ["PSo18UITraitEnvironment", "replaceBackground"]
 - !private ["PSo18UITraitEnvironment", "sendActions"]
 - ["PSo18UITraitEnvironment", "showFiltersInconsole"]
+- ["PSo18UITraitEnvironment", "showOriginalImage"]
 - ["PSo18UITraitEnvironment", "slider"]
 - !private ["PSo18UITraitEnvironment", "value"]
 - ["PSo18UITraitEnvironment", "valueChanged"]
@@ -1079,12 +1241,15 @@ depends-member:
 - !private ["CSo6UIView", "value"]
 - !private ["CSo16UIViewController", "CGAffineTransform"]
 - !private ["CSo16UIViewController", "CGSize"]
+- !private ["CSo16UIViewController", "CIColorInvert"]
 - ["CSo16UIViewController", "CIContext"]
 - ["CSo16UIViewController", "CIFilter"]
 - !private ["CSo16UIViewController", "CIImage"]
 - !private ["CSo16UIViewController", "CIVector"]
 - !private ["CSo16UIViewController", "Float"]
+- !private ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "M_PI"]
+- !private ["CSo16UIViewController", "NSData"]
 - !private ["CSo16UIViewController", "NSValue"]
 - !private ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIButton"]
@@ -1093,8 +1258,10 @@ depends-member:
 - ["CSo16UIViewController", "UIImage"]
 - ["CSo16UIViewController", "UIImageView"]
 - ["CSo16UIViewController", "UISlider"]
+- ["CSo16UIViewController", "colorInvert"]
 - ["CSo16UIViewController", "context"]
 - ["CSo16UIViewController", "context.storage"]
+- !private ["CSo16UIViewController", "createCubeMap"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "filter"]
 - ["CSo16UIViewController", "imageView"]
@@ -1109,7 +1276,9 @@ depends-member:
 - ["CSo16UIViewController", "originalImage"]
 - ["CSo16UIViewController", "originalImage.storage"]
 - !private ["CSo16UIViewController", "print"]
+- ["CSo16UIViewController", "replaceBackground"]
 - ["CSo16UIViewController", "showFiltersInconsole"]
+- ["CSo16UIViewController", "showOriginalImage"]
 - ["CSo16UIViewController", "slider"]
 - ["CSo16UIViewController", "valueChanged"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -1144,12 +1313,15 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "CGAffineTransform"]
 - !private ["Ps9_Hashable", "CGSize"]
+- !private ["Ps9_Hashable", "CIColorInvert"]
 - !private ["Ps9_Hashable", "CIContext"]
 - !private ["Ps9_Hashable", "CIFilter"]
 - !private ["Ps9_Hashable", "CIImage"]
 - !private ["Ps9_Hashable", "CIVector"]
 - !private ["Ps9_Hashable", "Float"]
+- !private ["Ps9_Hashable", "Int"]
 - !private ["Ps9_Hashable", "M_PI"]
+- !private ["Ps9_Hashable", "NSData"]
 - !private ["Ps9_Hashable", "NSValue"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UIControlEvents"]
@@ -1159,9 +1331,11 @@ depends-member:
 - !private ["Ps9_Hashable", "attributes"]
 - !private ["Ps9_Hashable", "black"]
 - !private ["Ps9_Hashable", "cgColor"]
+- ["Ps9_Hashable", "colorInvert"]
 - ["Ps9_Hashable", "context"]
 - ["Ps9_Hashable", "context.storage"]
 - !private ["Ps9_Hashable", "createCGImage"]
+- !private ["Ps9_Hashable", "createCubeMap"]
 - !private ["Ps9_Hashable", "cropping"]
 - !private ["Ps9_Hashable", "extent"]
 - ["Ps9_Hashable", "filter"]
@@ -1169,6 +1343,7 @@ depends-member:
 - !private ["Ps9_Hashable", "image"]
 - ["Ps9_Hashable", "imageView"]
 - !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "inputImage"]
 - !private ["Ps9_Hashable", "kCICategoryBuiltIn"]
 - !private ["Ps9_Hashable", "kCIInputAngleKey"]
 - !private ["Ps9_Hashable", "kCIInputBackgroundImageKey"]
@@ -1183,23 +1358,29 @@ depends-member:
 - ["Ps9_Hashable", "originalImage.storage"]
 - !private ["Ps9_Hashable", "outputImage"]
 - !private ["Ps9_Hashable", "print"]
+- ["Ps9_Hashable", "replaceBackground"]
 - !private ["Ps9_Hashable", "sendActions"]
 - !private ["Ps9_Hashable", "setValue"]
 - !private ["Ps9_Hashable", "shadowColor"]
 - !private ["Ps9_Hashable", "shadowOffset"]
 - !private ["Ps9_Hashable", "shadowOpacity"]
 - ["Ps9_Hashable", "showFiltersInconsole"]
+- ["Ps9_Hashable", "showOriginalImage"]
 - ["Ps9_Hashable", "slider"]
 - !private ["Ps9_Hashable", "value"]
 - ["Ps9_Hashable", "valueChanged"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps14_SignedInteger", "init"]
 - !private ["Ps11_Strideable", "init"]
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
@@ -1208,6 +1389,7 @@ depends-nominal:
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Ps19BinaryFloatingPoint"
+- !private "Ps17BitwiseOperations"
 - "Sb"
 - "CSo7CALayer"
 - !private "PSo15CALayerDelegate"
@@ -1218,6 +1400,7 @@ depends-nominal:
 - "CSo7CGImage"
 - "VSC6CGRect"
 - "VSC6CGSize"
+- "C12CIFilterDemo13CIColorInvert"
 - "CSo9CIContext"
 - "CSo8CIFilter"
 - "CSo7CIImage"
@@ -1226,6 +1409,7 @@ depends-nominal:
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
 - "C12CIFilterDemo27ComplexFilterViewController"
+- "VSC7CubeMap"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
@@ -1249,6 +1433,9 @@ depends-nominal:
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
+- "Vs5Int32"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
@@ -1257,6 +1444,7 @@ depends-nominal:
 - "CSo7NSCoder"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
+- "CSo6NSData"
 - "PSo26NSExtensionRequestHandling"
 - !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
@@ -1274,6 +1462,7 @@ depends-nominal:
 - "V10ObjectiveC8Selector"
 - !private "Ps8Sequence"
 - !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Ps10Strideable"
 - "SS"
@@ -1315,17 +1504,23 @@ depends-nominal:
 - !private "Ps26_ExpressibleByImageLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
 - !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps14_SignedInteger"
 - !private "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CIFilterDemo-Bridging-Header.h"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CubeMap.c"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "123e9ad60d17f5c7b055d6e6691f87cf"
+interface-hash: "ef4106ad74b2bf5fead55a201bd6c0bd"

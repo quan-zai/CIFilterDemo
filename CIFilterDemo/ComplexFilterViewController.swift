@@ -42,7 +42,7 @@ class ComplexFilterViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     lazy var originalImage: UIImage = {
-        return UIImage(named:"image1.jpg")!
+        return UIImage(named:"image2")!
     }()
     
     lazy var context: CIContext = {
@@ -77,6 +77,37 @@ class ComplexFilterViewController: UIViewController {
         filter.setValue(slider.value, forKey: kCIInputAngleKey)
         let outputImage = filter.outputImage
         let cgImage = context.createCGImage(outputImage!, from: (outputImage?.extent)!)
+        imageView.image = UIImage(cgImage: cgImage!)
+    }
+    
+    @IBAction func colorInvert(_ sender: UIButton) {
+        let colorInvertFilter = CIColorInvert()
+        colorInvertFilter.inputImage = CIImage(image: imageView.image!)
+        let outputImage = colorInvertFilter.outputImage
+        let cgImage = context.createCGImage(outputImage!, from: (outputImage?.extent)!)
+        imageView.image = UIImage(cgImage: cgImage!)
+    }
+    
+    @IBAction func showOriginalImage(_ sender: UIButton) {
+        imageView.image = originalImage
+    }
+    
+    @IBAction func replaceBackground(_ sender: UIButton) {
+        let cubeMap = createCubeMap(60,90)
+        let data = NSData(bytesNoCopy: cubeMap.data, length: Int(cubeMap.length), freeWhenDone: true)
+        let colorCubeFilter = CIFilter(name: "CIColorCube")
+        
+        colorCubeFilter?.setValue(cubeMap.dimension, forKey: "inputCubeDimension")
+        colorCubeFilter?.setValue(data, forKey: "inputCubeData")
+        colorCubeFilter?.setValue(CIImage(image: imageView.image!), forKey: kCIInputImageKey)
+        var outputImage = colorCubeFilter?.outputImage
+        
+        let sourceOverCompositingFilter = CIFilter(name: "CISourceOverCompositing")
+        sourceOverCompositingFilter?.setValue(outputImage, forKey: kCIInputImageKey)
+        sourceOverCompositingFilter?.setValue(CIImage(image: UIImage(named: "image3")!), forKey: kCIInputBackgroundImageKey)
+        
+        outputImage = sourceOverCompositingFilter?.outputImage
+        let cgImage = context.createCGImage(outputImage!, from: outputImage!.extent)
         imageView.image = UIImage(cgImage: cgImage!)
     }
     

@@ -111,6 +111,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreImage;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -130,14 +131,23 @@ SWIFT_CLASS("_TtC12CIFilterDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class CIImage;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC12CIFilterDemo13CIColorInvert")
+@interface CIColorInvert : CIFilter
+@property (nonatomic, strong) CIImage * _Null_unspecified inputImage;
+@property (nonatomic, readonly, strong) CIImage * _Nullable outputImage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIImage;
 @class CIContext;
-@class CIFilter;
 @class UISlider;
 @class UIButton;
 @class UIImageView;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC12CIFilterDemo27ComplexFilterViewController")
 @interface ComplexFilterViewController : UIViewController
@@ -148,6 +158,9 @@ SWIFT_CLASS("_TtC12CIFilterDemo27ComplexFilterViewController")
 @property (nonatomic, strong) CIFilter * _Null_unspecified filter;
 - (void)viewDidLoad;
 - (void)valueChanged:(UISlider * _Nonnull)slider;
+- (IBAction)colorInvert:(UIButton * _Nonnull)sender;
+- (IBAction)showOriginalImage:(UIButton * _Nonnull)sender;
+- (IBAction)replaceBackground:(UIButton * _Nonnull)sender;
 - (IBAction)oldFilmEffect:(UIButton * _Nonnull)sender;
 - (void)showFiltersInconsole;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

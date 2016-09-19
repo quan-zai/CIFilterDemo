@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C12CIFilterDemo11AppDelegate", ""]
 provides-dynamic-lookup:
+- "window"
+- "applicationWillEnterForeground"
+- "applicationDidEnterBackground"
 - "applicationWillResignActive"
 - "applicationWillTerminate"
-- "applicationDidEnterBackground"
-- "applicationWillEnterForeground"
 - "application"
-- "window"
 - "applicationDidBecomeActive"
 depends-top-level:
+- "UIApplicationDelegate"
+- "UIApplication"
 - "UIApplicationLaunchOptionsKey"
+- "UIWindow"
 - "AppDelegate"
 - !private "BooleanLiteralType"
-- "UIWindow"
 - "UIResponder"
-- "UIApplication"
 - "Bool"
-- "UIApplicationDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
@@ -250,10 +250,12 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CIFilterDemo-Bridging-Header.h"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CubeMap.c"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"

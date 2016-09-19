@@ -1,0 +1,230 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CIColorInvert"
+provides-nominal:
+- "C12CIFilterDemo13CIColorInvert"
+provides-member:
+- ["C12CIFilterDemo13CIColorInvert", ""]
+provides-dynamic-lookup:
+- "inputImage"
+- "outputImage"
+depends-top-level:
+- "CIColorInvert"
+- !private "CIVector"
+- "CIFilter"
+- !private "kCIInputImageKey"
+- "CIImage"
+- !private "StringLiteralType"
+- !private "Dictionary"
+depends-member:
+- !private ["Ps9AnyObject", "CIFilter"]
+- !private ["Ps9AnyObject", "CIVector"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "inputImage"]
+- !private ["Ps9AnyObject", "kCIInputImageKey"]
+- ["Ps9AnyObject", "outputImage"]
+- ["Ps9AnyObject", ""]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["C12CIFilterDemo13CIColorInvert", "CIFilter"]
+- ["C12CIFilterDemo13CIColorInvert", "CIImage"]
+- !private ["C12CIFilterDemo13CIColorInvert", "CIVector"]
+- ["C12CIFilterDemo13CIColorInvert", "deinit"]
+- ["C12CIFilterDemo13CIColorInvert", "init"]
+- ["C12CIFilterDemo13CIColorInvert", "inputImage"]
+- !private ["C12CIFilterDemo13CIColorInvert", "kCIInputImageKey"]
+- ["C12CIFilterDemo13CIColorInvert", "outputImage"]
+- !private ["CSo8CIFilter", "CIFilter"]
+- ["CSo8CIFilter", "CIImage"]
+- !private ["CSo8CIFilter", "CIVector"]
+- ["CSo8CIFilter", "deinit"]
+- ["CSo8CIFilter", "init"]
+- ["CSo8CIFilter", "inputImage"]
+- !private ["CSo8CIFilter", "kCIInputImageKey"]
+- ["CSo8CIFilter", "outputImage"]
+- ["CSo8CIFilter", ""]
+- ["CSo8CIVector", "deinit"]
+- !private ["CSo8CIVector", "init"]
+- !private ["Ps7CVarArg", "CIFilter"]
+- !private ["Ps7CVarArg", "CIVector"]
+- !private ["Ps7CVarArg", "Key"]
+- !private ["Ps7CVarArg", "Value"]
+- !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "inputImage"]
+- !private ["Ps7CVarArg", "kCIInputImageKey"]
+- ["Ps7CVarArg", "outputImage"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Key"]
+- !private ["Ps10Collection", "Value"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CIFilter"]
+- !private ["Ps28CustomDebugStringConvertible", "CIVector"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "inputImage"]
+- !private ["Ps28CustomDebugStringConvertible", "kCIInputImageKey"]
+- ["Ps28CustomDebugStringConvertible", "outputImage"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Key"]
+- !private ["Ps17CustomReflectable", "Value"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "CIFilter"]
+- !private ["Ps23CustomStringConvertible", "CIVector"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "inputImage"]
+- !private ["Ps23CustomStringConvertible", "kCIInputImageKey"]
+- ["Ps23CustomStringConvertible", "outputImage"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- ["Vs10Dictionary", "deinit"]
+- !private ["Ps9Equatable", "CIFilter"]
+- !private ["Ps9Equatable", "CIVector"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "inputImage"]
+- !private ["Ps9Equatable", "kCIInputImageKey"]
+- ["Ps9Equatable", "outputImage"]
+- ["Ps9Equatable", ""]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "CIFilter"]
+- !private ["Ps8Hashable", "CIVector"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "inputImage"]
+- !private ["Ps8Hashable", "kCIInputImageKey"]
+- ["Ps8Hashable", "outputImage"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Ps13IndexableBase", "Key"]
+- !private ["Ps13IndexableBase", "Value"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "CIFilter"]
+- !private ["PSo8NSCoding", "CIVector"]
+- !private ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "inputImage"]
+- !private ["PSo8NSCoding", "kCIInputImageKey"]
+- ["PSo8NSCoding", "outputImage"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "CIFilter"]
+- !private ["PSo9NSCopying", "CIVector"]
+- !private ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "inputImage"]
+- !private ["PSo9NSCopying", "kCIInputImageKey"]
+- ["PSo9NSCopying", "outputImage"]
+- ["PSo9NSCopying", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "CIFilter"]
+- ["CSo8NSObject", "CIImage"]
+- !private ["CSo8NSObject", "CIVector"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "inputImage"]
+- !private ["CSo8NSObject", "kCIInputImageKey"]
+- ["CSo8NSObject", "outputImage"]
+- !private ["PSo16NSObjectProtocol", "CIFilter"]
+- !private ["PSo16NSObjectProtocol", "CIVector"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "inputImage"]
+- !private ["PSo16NSObjectProtocol", "kCIInputImageKey"]
+- ["PSo16NSObjectProtocol", "outputImage"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "CIFilter"]
+- !private ["PSo14NSSecureCoding", "CIVector"]
+- !private ["PSo14NSSecureCoding", "init"]
+- ["PSo14NSSecureCoding", "inputImage"]
+- !private ["PSo14NSSecureCoding", "kCIInputImageKey"]
+- ["PSo14NSSecureCoding", "outputImage"]
+- ["PSo14NSSecureCoding", ""]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- !private ["Ps8Sequence", "Key"]
+- !private ["Ps8Sequence", "Value"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "CIFilter"]
+- !private ["Ps9_Hashable", "CIVector"]
+- !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "inputImage"]
+- !private ["Ps9_Hashable", "kCIInputImageKey"]
+- ["Ps9_Hashable", "outputImage"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "V12CoreGraphics7CGFloat"
+- "C12CIFilterDemo13CIColorInvert"
+- "CSo8CIFilter"
+- "CSo8CIVector"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- "Ps9Equatable"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- !private "Ps8Sequence"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CIFilterDemo-Bridging-Header.h"
+- "/Users/atyun-monitor/Desktop/Swift/CIFilterDemo/CIFilterDemo/CubeMap.c"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "c90cf4189089428d46088b99b40d0af2"

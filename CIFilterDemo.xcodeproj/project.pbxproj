@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C372EF031D8F84A3009A9780 /* CIColorInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C372EF021D8F84A3009A9780 /* CIColorInvert.swift */; };
+		C372EF061D8F8961009A9780 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = C372EF041D8F8961009A9780 /* image2.png */; };
+		C372EF071D8F8961009A9780 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = C372EF051D8F8961009A9780 /* image3.png */; };
+		C372EF171D8FCBD1009A9780 /* CubeMap.c in Sources */ = {isa = PBXBuildFile; fileRef = C372EF091D8FB5E6009A9780 /* CubeMap.c */; };
 		C38B2AB61D8E358B0085B394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B2AB51D8E358A0085B394 /* AppDelegate.swift */; };
 		C38B2AB81D8E358B0085B394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B2AB71D8E358B0085B394 /* ViewController.swift */; };
 		C38B2ABB1D8E358B0085B394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38B2AB91D8E358B0085B394 /* Main.storyboard */; };
@@ -38,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C372EF021D8F84A3009A9780 /* CIColorInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorInvert.swift; sourceTree = "<group>"; };
+		C372EF041D8F8961009A9780 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		C372EF051D8F8961009A9780 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		C372EF081D8FB5E6009A9780 /* CIFilterDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIFilterDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C372EF091D8FB5E6009A9780 /* CubeMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CubeMap.c; sourceTree = "<group>"; };
 		C38B2AB21D8E358A0085B394 /* CIFilterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIFilterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38B2AB51D8E358A0085B394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38B2AB71D8E358B0085B394 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,15 +115,20 @@
 			isa = PBXGroup;
 			children = (
 				C38B2AF11D8EA0560085B394 /* image1.jpg */,
+				C372EF041D8F8961009A9780 /* image2.png */,
+				C372EF051D8F8961009A9780 /* image3.png */,
 				C38B2AE51D8E3F6E0085B394 /* image.png */,
 				C38B2AB51D8E358A0085B394 /* AppDelegate.swift */,
 				C38B2AB71D8E358B0085B394 /* ViewController.swift */,
 				C38B2AE91D8E6D7B0085B394 /* ComplexFilterViewController.swift */,
+				C372EF091D8FB5E6009A9780 /* CubeMap.c */,
+				C372EF021D8F84A3009A9780 /* CIColorInvert.swift */,
 				C38B2AEB1D8E6E1A0085B394 /* complexFilter.storyboard */,
 				C38B2AB91D8E358B0085B394 /* Main.storyboard */,
 				C38B2ABC1D8E358B0085B394 /* Assets.xcassets */,
 				C38B2ABE1D8E358B0085B394 /* LaunchScreen.storyboard */,
 				C38B2AC11D8E358B0085B394 /* Info.plist */,
+				C372EF081D8FB5E6009A9780 /* CIFilterDemo-Bridging-Header.h */,
 			);
 			path = CIFilterDemo;
 			sourceTree = "<group>";
@@ -206,6 +220,7 @@
 					C38B2AB11D8E358A0085B394 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3UVPHG8LZ7;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					C38B2AC51D8E358B0085B394 = {
@@ -250,9 +265,11 @@
 				C38B2AC01D8E358B0085B394 /* LaunchScreen.storyboard in Resources */,
 				C38B2ABD1D8E358B0085B394 /* Assets.xcassets in Resources */,
 				C38B2ABB1D8E358B0085B394 /* Main.storyboard in Resources */,
+				C372EF071D8F8961009A9780 /* image3.png in Resources */,
 				C38B2AE61D8E3F6E0085B394 /* image.png in Resources */,
 				C38B2AEC1D8E6E1A0085B394 /* complexFilter.storyboard in Resources */,
 				C38B2AF21D8EA0560085B394 /* image1.jpg in Resources */,
+				C372EF061D8F8961009A9780 /* image2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C372EF171D8FCBD1009A9780 /* CubeMap.c in Sources */,
 				C38B2AEA1D8E6D7B0085B394 /* ComplexFilterViewController.swift in Sources */,
+				C372EF031D8F84A3009A9780 /* CIColorInvert.swift in Sources */,
 				C38B2AB81D8E358B0085B394 /* ViewController.swift in Sources */,
 				C38B2AB61D8E358B0085B394 /* AppDelegate.swift in Sources */,
 			);
@@ -431,11 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3UVPHG8LZ7;
 				INFOPLIST_FILE = CIFilterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunshen.dantang.CIFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CIFilterDemo/CIFilterDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,11 +467,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3UVPHG8LZ7;
 				INFOPLIST_FILE = CIFilterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunshen.dantang.CIFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CIFilterDemo/CIFilterDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
